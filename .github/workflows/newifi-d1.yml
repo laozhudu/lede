@@ -9,9 +9,9 @@
 
 name: newifi-d1
 
-on:
-  push:
-    branches: 
+#on:
+#  push:
+#    branches: 
       - master
   #     ↑↑↑ 改成你的分支名, 一般是master
   # schedule:
@@ -137,11 +137,8 @@ jobs:
           # USB3.0支持:
           cat >> .config <<EOF
           CONFIG_PACKAGE_kmod-usb-ohci=y
-          CONFIG_PACKAGE_kmod-usb-ohci-pci=y
           CONFIG_PACKAGE_kmod-usb2=y
-          CONFIG_PACKAGE_kmod-usb2-pci=y
           CONFIG_PACKAGE_kmod-usb3=y
-          CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
           CONFIG_PACKAGE_kmod-usb-net=y
           CONFIG_PACKAGE_kmod-usb-net-asix=y
           CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
